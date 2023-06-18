@@ -59,6 +59,7 @@ while True:
 
         if save_unknown:
             unknown_counter = 0
+            save_unknown = False
             now = datetime.now()
             timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
             image_name = f"Unknown/{timestamp}.jpg"

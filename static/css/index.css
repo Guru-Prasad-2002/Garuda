@@ -1,0 +1,119 @@
+body {
+    background-color: #c6c8c76e;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.first-section {
+    flex: 1;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-height: calc(100vh - 88px);
+    gap: 10px;
+}
+
+.registerCard {
+
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.side-bar {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    gap: 10px;
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-color {
+    background-color: #19875442;
+}
+
+
+.form-mod {
+    margin: 10px;
+}
+
+.btns {
+    background-color: #19875442;
+    border: none;
+    color: #198754;
+    border-radius: 5px;
+    padding: 10px;
+    width: 12rem;
+
+}
+
+
+.side-bar .imgs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow: auto;
+    gap: 10px;
+}
+
+.id-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.id-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bar .registerCard {
+    width: 100%;
+}
+
+.side-bar section {
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+ /* Designing for scroll-bar */
+ ::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #19875442;
+    border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#198754;
+}

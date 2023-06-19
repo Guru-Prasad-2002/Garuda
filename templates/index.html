@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unknown Faces</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .image-item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unknown Faces</h1>
+    <div class="image-container">
+        {% for image_name in image_names %}
+            <div class="image-item">
+                <img src="{{ url_for('serve_image', filename=image_name) }}" alt="Unknown Face">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

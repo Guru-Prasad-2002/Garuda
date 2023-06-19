@@ -52,7 +52,7 @@ while True:
         # Store image of unknown face
         if name == "Unknown":
             unknown_counter += 1
-            if unknown_counter > 20:
+            if unknown_counter > 10:
                 save_unknown = True
                 unknown_counter = 0
         else:

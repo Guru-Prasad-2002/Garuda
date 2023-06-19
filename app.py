@@ -92,7 +92,7 @@ def login():
             session['email'] = user['email']
             mesage = 'Logged in successfully !'
             loginmain=True
-            return render_template('index.html', mesage = mesage)
+            return redirect(url_for('index'))
         else:
             mesage = 'Please enter correct email / password !'
     return render_template('login.html', mesage = mesage)
@@ -185,16 +185,33 @@ def registerbuttonmain():
         video_capture.release()
         cv2.destroyAllWindows()
     else:
-        return 'You have not logged in'
+        return redirect(url_for('login'))
 
-def home():
-    image_names = os.listdir(unknown_folder)
-    return render_template("index.html", image_names=image_names)
+@app.route('/index', methods =['GET', 'POST'])
+def index():
+    global loginmain
+    if loginmain==True:
+        return render_template("index.html")
+    else:
+        return redirect(url_for('login'))
     # return render_template("login.html")
 
-@app.route("/images/<path:filename>")
+@app.route('/check_log', methods =['GET', 'POST'])
+def check_log():
+    global loginmain
+    if loginmain==True:
+        image_names = os.listdir(unknown_folder)
+        return render_template("log.html", image_names=image_names)
+    else:
+        return redirect(url_for('login'))
+
+@app.route("/images/<path:filename>", methods =['GET', 'POST'])
 def serve_image(filename):
-    return send_from_directory(unknown_folder, filename)
+    global loginmain
+    if loginmain==True:
+        return send_from_directory(unknown_folder, filename)
+    else:
+        return redirect(url_for('login'))
 
 if __name__ == "__main__":
     app.run()

@@ -1,119 +1,75 @@
 body {
-    background-color: #c6c8c76e;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #FFF9DE;
 }
 
-.first-section {
-    flex: 1;
-    padding-inline: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    max-height: calc(100vh - 88px);
-    gap: 10px;
+.container {
+    text-align: center;
+    margin-top: 10%;
 }
 
-.registerCard {
-
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF6969;
 }
 
-.side-bar {
-    height: 100%;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: start;
-    gap: 10px;
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF6969;
 }
 
-.content {
-    flex: 1;
-    overflow-y: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+p {
+    font-size: 1.2rem;
+    color: #FF6969;
 }
 
-.nav-color {
-    background-color: #19875442;
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
-
-.form-mod {
-    margin: 10px;
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
-.btns {
-    background-color: #19875442;
-    border: none;
-    color: #198754;
-    border-radius: 5px;
-    padding: 10px;
-    width: 12rem;
-
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
 }
 
-
-.side-bar .imgs-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    overflow: auto;
-    gap: 10px;
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
 }
 
-.id-container img {
-    width: 200px;
-    height: 200px;
+.logo-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    /* Adjust the desired maximum width */
+    max-height: 70px;
+    /* Adjust the desired maximum height */
+    width: 150px;
+    height: auto;
 }
 
-.id-container {
-    display: flex;
-    justify-content: space-between;
+.nav-color{
+    background-color: #FFD3B0;
+    border-color: #526D82;
 }
 
-.side-bar .registerCard {
-    width: 100%;
+.btn-color{
+    background-color: #FF6969;
+}
+.btn-color-2{
+    background-color: #FFD3B0;
 }
 
-.side-bar section {
-    width: 100%;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.175);
-    border-radius: 5px;
-    padding: 20px;
+.color{
+    color: #FF6969;
 }
-
-
- /* Designing for scroll-bar */
- ::-webkit-scrollbar {
-    width: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: gainsboro;
-    border-radius: 5px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #19875442;
-    border-radius: 1px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background:#198754;
+.color-2{
+    color: #FFD3B0;
 }

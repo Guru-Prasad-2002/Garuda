@@ -3,11 +3,13 @@ import face_recognition
 import pickle
 import os
 from datetime import datetime
+import subprocess
 
 # Load known face encodings and their names from the pickle file
 confidence_threshold = 0.5
 unknown_counter = 0
 save_unknown = False
+
 
 with open("known_faces.pickle", "rb") as file:
     known_data = pickle.load(file)
@@ -62,8 +64,10 @@ while True:
             save_unknown = False
             now = datetime.now()
             timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+            command = ['python', 'sms.py', "Unknown face detected at " + timestamp]
             image_name = f"Unknown/{timestamp}.jpg"
             cv2.imwrite(image_name, frame)
+            subprocess.run(command)
 
     # Display the resulting image
     cv2.imshow('Face Recognition', frame)

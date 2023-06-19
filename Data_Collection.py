@@ -3,7 +3,7 @@ import os
 
 # Set the directory path to store the face images
 known_dir = "Known"
-subfolder_name = "Guru"  # Change this to the desired subfolder name
+subfolder_name = "Guru1"  # Change this to the desired subfolder name
 
 # Create the subfolder if it doesn't exist
 subfolder_path = os.path.join(known_dir, subfolder_name)
@@ -47,7 +47,7 @@ while True:
         print(f"Captured image {image_counter}")
 
     # Exit loop when 50 images are captured or 'q' is pressed
-    if image_counter >= 100 or cv2.waitKey(1) & 0xFF == ord('q'):
+    if image_counter >= 50 or cv2.waitKey(1) & 0xFF == ord('q'):
         break
     print("Here")
 # Release the webcam and destroy the windows

@@ -5,6 +5,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 
 <!-- <body class="bg-dark"> -->
@@ -34,24 +35,36 @@
                 <p>A single place for all your home security concerns.</p>
             </div>
         </div>
-
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="nameInput" class="color">Name:</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                    <!-- <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="submitNameBtn">Submit Name</button>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+        
         <div class="row mt-5">
             <div class="col-md-12">
-                <a href="#" class="btn btn-color">Register</a>
-                <a href="check_log" class="btn btn-color-2">Check Log</a>
+                <a href="{{url_for('registerbuttonmain')}}" class="btn btn-color" class="btn btn-color" id="registerBtn" onclick=submitForm()>Register</a>
+            <a href="{{url_for('check_log')}}" class="btn btn-color-2">Check Log</a>
             </div>
         </div>
     </div>
-
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h3>Additional Features</h3>
-                <p>This space can be used for additional features in the future.</p>
+                <a href="#" class="btn btn-color" class="btn btn-color" id="registerBtn" >Unlock Door</a>
+                <h3>STATUS</h3>
+                <!-- <p>This space can be used for additional features in the future.</p> -->
             </div>
         </div>
     </div>
 
+    <script src="/static/js/input.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

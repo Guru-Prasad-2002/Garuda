@@ -38,5 +38,3 @@ known_data = {"encodings": known_encodings, "names": known_names}
 # Save the dictionary as a pickle file
 with open("known_faces.pickle", "wb") as file:
     pickle.dump(known_data, file)
-
-

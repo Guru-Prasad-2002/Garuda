@@ -1,27 +1,27 @@
 body {
-    background-color: #FFF9DE;
+    background-color: #F2F0FF;
+    /* background-color: #FEFBE1; */
 }
 
 .container {
     text-align: center;
     margin-top: 10%;
 }
-
 h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #FF6969;
+    color: #2D2D2D;
 }
 
 h3 {
     font-size: 2rem;
     font-weight: bold;
-    color: #FF6969;
+    color: #2D2D2D;
 }
 
 p {
     font-size: 1.2rem;
-    color: #FF6969;
+    color: #2D2D2D;
 }
 
 .btn-primary {
@@ -56,20 +56,24 @@ p {
 }
 
 .nav-color{
-    background-color: #FFD3B0;
+    background-color: #FEFBE1;
+    /* background-color: #F2F0FF; */
     border-color: #526D82;
 }
 
 .btn-color{
-    background-color: #FF6969;
+    background-color: #aa9bff;
 }
 .btn-color-2{
-    background-color: #FFD3B0;
+    background-color: #FDE4A2;
 }
 
 .color{
-    color: #FF6969;
+    color: #2D2D2D;
 }
 .color-2{
     color: #FFD3B0;
+}
+.input-color{
+    background-color: #FCFAF5;
 }

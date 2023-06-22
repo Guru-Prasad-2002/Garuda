@@ -14,7 +14,8 @@ from sqlalchemy.ext.declarative import declarative_base
 import sys
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
-# import Data_Collection
+import Data_Collection
+import Encoder
 
 app = Flask(__name__)
 
@@ -112,7 +113,12 @@ def process_input():
 def registerbuttonmain():
     if loginmain==True:
         if subfoldername!="":
+            # delete the pickle file
+            delete_file = "known_faces.pickle"
+            if os.path.exists(delete_file):
+                os.remove(delete_file)
             Data_Collection.collect_data(subfoldername)
+            Encoder.run_this()
             return 'Succesfully registered'
         else:
             return render_template("index.html")

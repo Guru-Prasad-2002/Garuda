@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-	<h2 style="color: #FF6969;">User Registration</h2>
+	<h2 style="color: #8B76FF;">User Registration</h2>
 	<form action="{{ url_for('register') }}" method="post">
         {% if mesage is defined and mesage %}
 			<div class="alert alert-warning">{{ mesage }}</div>
@@ -25,7 +25,7 @@
 			<label for="pwd">Password:</label>
 			<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
 		</div>    
-		<button type="submit" class="btn btn-primary" style="background-color: #FF6969;">Register</button>
+		<button type="submit" class="btn btn-primary" style="background-color: #8B76FF;">Register</button>
 		<p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Login here</a></p>
 	</form>
 </div>        

@@ -1,29 +1,3 @@
-/* body {
-    background-color: #FFF9DE;
-} */
-
-/* gradient-custom { */
-/* fallback for old browsers */
-/* background: #6a11cb; */
-
-/* Chrome 10-25, Safari 5.1-6 */
-/* background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)); */
-
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/* background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-} */
-/* .color-1{
-    background-color: #FF6969;
-}
-.color-2{
-    background-color: #FFD3B0;
-}
-.color-3{
-    background-color: #FFF9DE;
-}
-.color-4{
-    background-color: #A6D0DD;
-} */
 body {
     padding: 20px;
     display: flex;
@@ -32,7 +6,9 @@ body {
     min-height: 100vh;
     overflow: hidden;
     /* Add this line to remove overflow and prevent scrolling */
-    background-color: FF6969;
+    /* background-color: #8B76FF; */
+    background-color: #F2F0FF;
+    /* background-color: #FEFBE1;  */
 }
 
 .container {
@@ -41,6 +17,7 @@ body {
     border-radius: 10px;
     padding: 25px;
     background-color: white;
+    /* background-color: #F8D57E; */
 }
 
 header {

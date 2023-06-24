@@ -2,3 +2,6 @@ venv/
 /.vs
 /.idea 
 /Known
+/Datasets
+/__pycache__
+/Unknown

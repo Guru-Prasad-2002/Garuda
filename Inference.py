@@ -36,14 +36,19 @@ while True:
         # Compare the face encoding with known encodings
         matches = face_recognition.compare_faces(known_encodings, face_encoding)
         name = "Unknown"
-
+        d={i:0 for i in known_names}
+        # max_name=""
+        # max_count=0
         for i in range(len(matches)):
             if matches[i]:
                 face_distance = face_recognition.face_distance([known_encodings[i]], face_encoding)
                 if face_distance[0] < confidence_threshold:
-                    name = known_names[i]
-                    break
-
+                    d[known_names[i]]+=1
+        name=max(d,key=lambda x:d[x])
+        print(name,d[name])
+        if d[name]< 2:
+            name="Unknown"
+        
         # Draw bounding box and label on the frame
         top, right, bottom, left = face_location
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)

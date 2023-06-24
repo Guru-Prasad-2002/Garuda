@@ -15,7 +15,7 @@ import sys
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import Data_Collection
-import Encoder
+# import Encoder
 
 app = Flask(__name__)
 

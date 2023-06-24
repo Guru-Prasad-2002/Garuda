@@ -23,7 +23,7 @@ def run_this():
 
             # Load the image and generate face encoding
             image = face_recognition.load_image_file(image_path)
-            face_locations = face_recognition.face_locations(image)
+            face_locations = face_recognition.face_locations(image, model="hog")
             if len(face_locations) > 0:
                 # Generate face encoding for the first detected face
                 encoding = face_recognition.face_encodings(image, face_locations)[0]
@@ -35,7 +35,10 @@ def run_this():
 
     # Create a dictionary with known encodings and names
     known_data = {"encodings": known_encodings, "names": known_names}
+    print(known_data)
 
     # Save the dictionary as a pickle file
     with open("known_faces.pickle", "wb") as file:
         pickle.dump(known_data, file)
+
+run_this()

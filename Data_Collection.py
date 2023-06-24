@@ -14,7 +14,7 @@ def collectdata(subfoldarename):
     video_capture = cv2.VideoCapture(0)
 
     # Face detection parameters
-    face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
     # Counter to keep track of the number of captured images
     image_counter = 0
@@ -27,10 +27,10 @@ def collectdata(subfoldarename):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Detect faces using haarcascade
-        faces_haarcascade = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+        # faces_haarcascade = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
         # Detect faces using face_recognition library
-        face_locations = face_recognition.face_locations(frame)
+        face_locations = face_recognition.face_locations(frame,model="hog")
         faces_face_recognition = len(face_locations)
 
         # Draw bounding boxes around the detected faces from haarcascade
@@ -38,34 +38,34 @@ def collectdata(subfoldarename):
         #     cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         # Draw bounding boxes around the detected faces from face_recognition library
-        if len(face_locations) == 1:
-            for (top, right, bottom, left) in face_locations:
-                cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
+        # if len(face_locations) == 1:
+        #     for (top, right, bottom, left) in face_locations:
+        #         cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
 
         # Display the resulting image
         cv2.imshow('Collecting Faces', frame)
 
         # Capture and save face images when both haarcascade and face_recognition detect faces
         if  len(face_locations) == 1:
-            if len(faces_haarcascade) == 1:
-            # Increment the image counter
-                image_counter += 1
+        # if len(faces_haarcascade) == 1:
+        # Increment the image counter
+            image_counter += 1
 
-                # Save the face image
-                face_image_path = os.path.join(subfolder_path, f"{image_counter}.jpg")
-                cv2.imwrite(face_image_path, frame)
+            # Save the face image
+            face_image_path = os.path.join(subfolder_path, f"{image_counter}.jpg")
+            cv2.imwrite(face_image_path, frame)
 
-                print(f"Captured image {image_counter}")
+            print(f"Captured image {image_counter}")
 
         # Exit loop when 100 images are captured or 'q' is pressed
-        if image_counter >= 125 or cv2.waitKey(1) & 0xFF == ord('q'):
+        if image_counter >= 50 or cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     # Release the webcam and destroy the windows
     video_capture.release()
     cv2.destroyAllWindows()
 
-
+# collectdata("Suresh")
 
 
 

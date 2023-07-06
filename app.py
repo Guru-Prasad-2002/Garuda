@@ -15,7 +15,8 @@ import sys
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import Data_Collection
-# import Encoder
+import Encoder
+from threading import Thread, Lock
 
 app = Flask(__name__)
 
@@ -23,6 +24,7 @@ app.secret_key = 'xyzsdfg'
 
 loginmain=False
 subfoldername=""
+lock = Lock()
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -57,7 +59,7 @@ def login():
         else:
             mesage = 'Please enter correct email / password !'
     return render_template('login.html', mesage = mesage)
-  
+
 @app.route('/logout')
 def logout():
     global loginmain
@@ -66,7 +68,7 @@ def logout():
     session.pop('email', None)
     loginmain=False
     return redirect(url_for('login'))
-  
+
 @app.route('/register', methods =['GET', 'POST'])
 def register():
     mesage = ''
@@ -109,17 +111,33 @@ def process_input():
     print(subfoldername)
     return name
 
+# @app.route('/registerbuttonmain')
+# def registerbuttonmain():
+#     if loginmain==True:
+#         if subfoldername!="":
+#             # delete the pickle file
+#             Data_Collection.collect_data(subfoldername)
+#             Encoder.run_this()
+#             return 'Succesfully registered'
+#         else:
+#             return render_template("index.html")
+#     else:
+#         return redirect(url_for('login'))
+
 @app.route('/registerbuttonmain')
 def registerbuttonmain():
-    if loginmain==True:
-        if subfoldername!="":
-            # delete the pickle file
-            delete_file = "known_faces.pickle"
-            if os.path.exists(delete_file):
-                os.remove(delete_file)
-            Data_Collection.collect_data(subfoldername)
-            Encoder.run_this()
-            return 'Succesfully registered'
+    global lock, subfoldername
+
+    if loginmain == True:
+        if subfoldername != "":
+            lock.acquire()  # Acquire the lock before making changes to the pickle file
+            try:
+                Data_Collection.collect_data(subfoldername)
+                Encoder.run_this()
+            finally:
+                lock.release()  # Release the lock after making changes to the pickle file
+
+            return 'Successfully registered'
         else:
             return render_template("index.html")
     else:

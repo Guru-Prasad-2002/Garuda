@@ -2,7 +2,7 @@ import cv2
 import os
 import face_recognition
 
-def collectdata(subfoldarename):
+def collect_data(subfoldarename):
 # Set the directory path to store the face images
     known_dir = "Known"
     subfolder_name = subfoldarename # Change this to the desired subfolder name
@@ -65,7 +65,10 @@ def collectdata(subfoldarename):
     video_capture.release()
     cv2.destroyAllWindows()
 
-# collectdata("Suresh")
+
+
+
+collect_data("MSD")
 
 
 

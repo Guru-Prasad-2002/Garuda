@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<!-- <body class="bg-dark"> -->
+<body class="color">
+    <nav class="navbar navbar-expand-sm navbar-collapse  nav-color">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='images/logo-no-background.png') }}" alt="Logo" class="logo-image">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-color-2" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Garuda!</h1>
+                <p>A single place for all your home security concerns.</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="nameInput" class="color">Name:</label>
+                    <input type="text" class="form-control input-color" id="nameInput" placeholder="Enter your name">
+                    <!-- <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="submitNameBtn">Submit Name</button>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <a href="{{url_for('registerbuttonmain')}}" class="btn btn-color" class="btn btn-color" id="registerBtn" onclick=submitForm()>Register</a>
+            <a href="{{url_for('check_log')}}" class="btn btn-color-2">Check Log</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#" class="btn btn-color" class="btn btn-color" id="registerBtn" >Unlock Door</a>
+                <h3>STATUS</h3>
+                <!-- <p>This space can be used for additional features in the future.</p> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/input.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

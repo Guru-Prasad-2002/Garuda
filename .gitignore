@@ -1,0 +1,11 @@
+
+venv/
+/.vs
+/.idea 
+
+# ignore Datasets and Known Folder and content in these folders
+.Known/
+
+/Datasets/
+
+

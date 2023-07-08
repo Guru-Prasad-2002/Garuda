@@ -84,4 +84,44 @@ Features of Garuda:
   <strong>Login Page</strong>
 </p>
 
+![Home_Screen](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/43dfd7e0-58d0-46c6-9d91-f3c853add0a5)
+<p align="center">
+  <strong>Home Screen</strong>
+</p>
 
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+<!-- ![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<p align="center">
+  <strong>Log</strong>
+</p>
+
+ -->

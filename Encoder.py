@@ -56,9 +56,7 @@ def run_this():
 
     print("Updated pickle file with new encodings and names.")
 
-
-
-
+# run_this()
 # import face_recognition
 # import os
 # import pickle

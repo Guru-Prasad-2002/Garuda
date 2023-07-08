@@ -11,7 +11,7 @@ def collect_data(subfoldarename):
     os.makedirs(subfolder_path, exist_ok=True)
 
     # Initialize webcam
-    video_capture = cv2.VideoCapture(0)
+    video_capture = cv2.VideoCapture(1)
 
     # Face detection parameters
     # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -64,10 +64,6 @@ def collect_data(subfoldarename):
     # Release the webcam and destroy the windows
     video_capture.release()
     cv2.destroyAllWindows()
-
-
-
-
 
 
 

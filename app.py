@@ -16,7 +16,9 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import Data_Collection
 import Encoder
+import unlock
 from threading import Thread, Lock
+import watchdogs
 
 app = Flask(__name__)
 
@@ -25,6 +27,7 @@ app.secret_key = 'xyzsdfg'
 loginmain=False
 subfoldername=""
 lock = Lock()
+successfullregister=False
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -126,14 +129,19 @@ def process_input():
 
 @app.route('/registerbuttonmain')
 def registerbuttonmain():
-    global lock, subfoldername
+    global lock, subfoldername,successfullregister
 
     if loginmain == True:
         if subfoldername != "":
             lock.acquire()  # Acquire the lock before making changes to the pickle file
             try:
+                successfullregister=True
+                if successfullregister==True:
+                    watchdogs.stop_script_by_name(watchdogs.script_name)
+                    successfullregister=False
                 Data_Collection.collect_data(subfoldername)
                 Encoder.run_this()
+                watchdogs.run_script(watchdogs.script_path)
             finally:
                 lock.release()  # Release the lock after making changes to the pickle file
 
@@ -157,6 +165,15 @@ def serve_image(filename):
     global loginmain
     if loginmain==True:
         return send_from_directory(unknown_folder, filename)
+    else:
+        return redirect(url_for('login'))
+
+@app.route('/unlock', methods =['GET', 'POST'])
+def unlock_the_door():
+    global loginmain
+    if loginmain==True:
+        unlock.unlock_door()
+        return redirect(url_for('index'))
     else:
         return redirect(url_for('login'))
 

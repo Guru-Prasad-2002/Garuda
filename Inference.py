@@ -26,7 +26,7 @@ if not os.path.exists("Unknown"):
 
 with lock:
     # Initialize webcam
-    video_capture = cv2.VideoCapture(0)
+    video_capture = cv2.VideoCapture(1)
 
     while True:
         # Capture frame-by-frame
@@ -51,7 +51,7 @@ with lock:
                         d[known_names[i]]+=1
             name=max(d,key=lambda x:d[x])
             print(name,d[name])
-            if d[name]< 2:
+            if d[name]< 10:
                 name="Unknown"
             
             # Draw bounding box and label on the frame

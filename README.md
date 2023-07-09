@@ -102,10 +102,27 @@ Features of Garuda:
 </p>
 
 
-!![ezgif-5-72238f9893](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/98e7a3f9-b83a-4ac9-8137-4343078a1287)
+<!-- ![ezgif-5-72238f9893](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/98e7a3f9-b83a-4ac9-8137-4343078a1287)
+<p align="center">
+  <strong>Face Recognition</strong>
+</p> -->
+
+<style>
+  .responsive-image {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+  }
+</style>
+
+<p align="center">
+  <img src="https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/98e7a3f9-b83a-4ac9-8137-4343078a1287" alt="ezgif-5-72238f9893" class="responsive-image">
+</p>
+
 <p align="center">
   <strong>Face Recognition</strong>
 </p>
+
 
 ![Sms_Alert](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/530ee605-1bff-4da2-8ada-60ea6fc76118)
 <p align="center">

@@ -26,7 +26,7 @@ if not os.path.exists("Unknown"):
 
 with lock:
     # Initialize webcam
-    video_capture = cv2.VideoCapture(1)
+    video_capture = cv2.VideoCapture(0)
 
     while True:
         # Capture frame-by-frame

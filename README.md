@@ -2,6 +2,13 @@
 
 Garude is an IoT-based home security system designed to ensure inhabitant safety. It incorporates face recognition using OpenCV and the face_recognition library. When an unknown face is detected, an SMS with timestamp is sent using BoltIot, and logs are stored in a database. The web interface, built with Flask and Bootstrap, allows access to the logs and supports user registration for enhanced security measures like automatic door locking.
 
+## Garuda Architecture
+
+![Garuda Architecture](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/cdc9f5b7-75b3-4689-afe6-5a217b392a65)
+<p align="center">
+  <strong>Garuda Architecture</strong>
+</p>
+
 ## Getting Started
 
 1. Clone the repository:
@@ -94,34 +101,30 @@ Features of Garuda:
   <strong>Log</strong>
 </p>
 
+
+!![ezgif-5-72238f9893](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/98e7a3f9-b83a-4ac9-8137-4343078a1287)
+<p align="center">
+  <strong>Face Recognition</strong>
+</p>
+
+![Sms_Alert](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/530ee605-1bff-4da2-8ada-60ea6fc76118)
+<p align="center">
+  <strong>Sms Alert</strong>
+</p> 
+
 <!-- ![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
 <p align="center">
   <strong>Log</strong>
-</p>
+</p> -->
 
-![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<!-- ![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
 <p align="center">
   <strong>Log</strong>
-</p>
+</p> -->
 
-![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
+<!-- ![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
 <p align="center">
   <strong>Log</strong>
-</p>
+</p> -->
 
-![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
-<p align="center">
-  <strong>Log</strong>
-</p>
-
-![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
-<p align="center">
-  <strong>Log</strong>
-</p>
-
-![Log](https://github.com/Guru-Prasad-2002/Garuda/assets/93508612/24da733f-619e-429c-8bca-898e8256f4c3)
-<p align="center">
-  <strong>Log</strong>
-</p>
-
- -->
+ 

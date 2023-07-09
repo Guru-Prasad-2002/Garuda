@@ -11,7 +11,7 @@ def collect_data(subfoldarename):
     os.makedirs(subfolder_path, exist_ok=True)
 
     # Initialize webcam
-    video_capture = cv2.VideoCapture(1)
+    video_capture = cv2.VideoCapture(0)
 
     # Face detection parameters
     # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
